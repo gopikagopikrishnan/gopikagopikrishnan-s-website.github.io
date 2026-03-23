@@ -119,6 +119,15 @@ main{margin-left:var(--nav);flex:1;padding:3rem 4rem 4rem;position:relative;z-in
 .misc-txt{flex:1;font-size:.83rem;color:var(--t1);line-height:1.6;font-weight:300;}
 .misc-txt strong{color:var(--c1);font-weight:500;}
 .misc-txt em{color:var(--c2);font-style:normal;}
+.misc-links{display:flex;gap:.38rem;margin-top:.3rem;flex-wrap:wrap;}
+.mlink{padding:.1rem .4rem;border:1px solid var(--glow);border-radius:2px;font-family:var(--f-mono);font-size:.52rem;color:var(--t3);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:all .15s;}
+.mlink:hover{color:var(--c1);border-color:var(--c1);background:rgba(0,229,255,.07);}
+.hobby-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.7rem;margin-top:1rem;}
+.hobby-card{background:var(--card);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:all .25s var(--ease);}
+.hobby-card:hover{border-color:var(--glow);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.4);}
+.hobby-card img{width:100%;height:150px;object-fit:cover;display:block;}
+.hobby-card-label{padding:.5rem .7rem;font-family:var(--f-mono);font-size:.55rem;color:var(--t2);letter-spacing:.08em;}
+.hobby-tag-row{display:flex;flex-wrap:wrap;gap:.25rem;padding:0 .7rem .6rem;}
 
 /* CV */
 .cv-dl{display:inline-flex;align-items:center;gap:.55rem;padding:.62rem 1.35rem;background:transparent;border:1px solid var(--c1);border-radius:3px;font-family:var(--f-mono);font-size:.65rem;color:var(--c1);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;transition:all .2s var(--ease);margin-bottom:2.1rem;}
@@ -189,8 +198,8 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--border);f
   <div class="about-wrap">
     <div class="bio">
       <p>I am a PhD student working at the intersection of <strong>deep learning</strong> and <strong>medical ultrasound imaging</strong>. My work focuses on deep beamforming architectures that adapt to tissue structure and imaging context, bridging classical signal processing with generalized neural network design.</p>
-      <p>I am currently affiliated with the <a href="https://www.singaporetech.edu.sg/">Ultrasound Imaging Lab and SITxNVIDIA AI Centre, Singapore Institute of Technology</a>, advised by Dr. Mahesh Raveendranatha Panicker.</p>
-      <p>I completed my B.Tech in Electronics and Communication Engineering (with a Minor in Machine Learning) at <a href="https://nssce.ac.in/">NSS College of Engineering, Palakkad</a> under APJ Abdul Kalam Technological University, graduating as <strong>Institute Topper</strong> with a CGPA of 9.88.</p>
+      <p>I am currently affiliated with the <a href="https://pulseecho.in/">Ultrasound Imaging Lab</a> and <a href="https://www.snaic.net/">SITxNVIDIA AI Centre</a>, <a href="https://www.singaporetech.edu.sg/">Singapore Institute of Technology</a>, advised by Dr. Mahesh Raveendranatha Panicker.</p>
+      <p>I completed my B.Tech in Electronics and Communication Engineering with a Minor in Machine Learning at <a href="https://nssce.ac.in/">NSS College of Engineering, Palakkad</a> under APJ Abdul Kalam Technological University.</p>
       <p>I am passionate about developing computational tools that make medical diagnostics more precise and accessible, particularly in resource-constrained settings.</p>
       <div class="soc-grid">
         <a class="soc-card" href="https://scholar.google.com/citations?user=4wyk8g4AAAAJ&hl=en" target="_blank">
@@ -242,7 +251,7 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--border);f
     
     <div class="proj-card">
       <div class="proj-title">ADAPT</div>
-      <p class="proj-desc">Adaptive Depth-Agnostic Patch-wise Tunable multibeamformer — an interpretable alternative to black-box CNNs exploiting physical priors under limited training data.</p>
+      <p class="proj-desc">Adaptive Depth-Agnostic Patch-wise Tunable multibeamformer - an interpretable alternative to black-box CNNs exploiting physical priors under limited training data.</p>
       <div class="tag-row"><span class="ptag">CNN</span><span class="ptag">MATLAB</span><span class="ptag">Physics-Informed</span><span class="ptag">Apodization</span></div>
       <div class="proj-links">
         <a class="gh-link" href="https://github.com/gopikagopikrishnan/ADAPT" target="_blank">
@@ -260,7 +269,7 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--border);f
     
     <div class="proj-card">
       <div class="proj-title">SerDes Equalizer Subsystem</div>
-      <p class="proj-desc">Design and development of an equalizer subsystem for a high-speed serializer-deserializer (SerDes) — B.Tech final year project.</p>
+      <p class="proj-desc">Design and development of an equalizer subsystem for a high-speed serializer-deserializer (SerDes) - B.Tech final year project.</p>
       <div class="tag-row"><span class="ptag">Verilog HDL</span><span class="ptag">Xilinx Vivado</span><span class="ptag">FPGA</span></div>
     </div>
     
@@ -272,7 +281,7 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--border);f
     
     <div class="proj-card">
       <div class="proj-title">Wi-Fi Throughput Optimization</div>
-      <p class="proj-desc">Research on time-slicing high-throughput Wi-Fi networks using centralized queuing and scheduling — Summer Research Fellowship at IISc Bengaluru.</p>
+      <p class="proj-desc">Research on time-slicing high-throughput Wi-Fi networks using centralized queuing and scheduling - Summer Research Fellowship at IISc Bengaluru.</p>
       <div class="tag-row"><span class="ptag">Computer Networks</span><span class="ptag">Wi-Fi</span><span class="ptag">IISc</span></div>
     </div>
     
@@ -299,6 +308,7 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--border);f
         </a>
       </div>
     </div>
+  </div>
 
   <h2 class="sec-h">◉ Journal Publications</h2>
   <ol class="pub-list">
@@ -345,35 +355,140 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--border);f
 
   <h2 class="sec-h">Awards &amp; Scholarships</h2>
   <div class="misc-group">
-    <div class="misc-row"><span class="misc-yr">2024</span><div class="misc-txt"><strong>Richard E. Merwin Scholarship</strong> — <em>IEEE Computer Society</em>. Awarded for academic excellence and contribution to the computing community.</div></div>
-    <div class="misc-row"><span class="misc-yr">2024</span><div class="misc-txt"><strong>IEEE Systems Council Engineering Undergraduate Scholarship</strong> — <em>IEEE Systems Council</em>.</div></div>
-    <div class="misc-row"><span class="misc-yr">2023</span><div class="misc-txt"><strong>IEEE AP-S USRS Scholarship</strong> — <em>IEEE Antennas and Propagation Society</em>.</div></div>
-    <div class="misc-row"><span class="misc-yr">2022</span><div class="misc-txt"><strong>Grace Hopper Scholar</strong> — Selected as a Grace Hopper Celebration Scholar.</div></div>
-    <div class="misc-row"><span class="misc-yr">2022</span><div class="misc-txt"><strong>India National Science Academies' Summer Research Fellowship</strong> — <em>IISc Bengaluru</em>. Competitive national fellowship for undergraduate research.</div></div>
-    <div class="misc-row"><span class="misc-yr">2020–24</span><div class="misc-txt"><strong>Institute Topper</strong> — <em>NSS College of Engineering, Palakkad</em>. Graduated with CGPA 9.88.</div></div>
-    <div class="misc-row"><span class="misc-yr">2018–20</span><div class="misc-txt"><strong>School Topper</strong> — <em>GMMGHSS, Palakkad</em>. Achieved 100% in Higher Secondary.</div></div>
+    <div class="misc-row">
+      <span class="misc-yr">2024</span>
+      <div class="misc-txt">
+        <strong>Richard E. Merwin Scholarship</strong> - <em>IEEE Computer Society</em>. Awarded for academic excellence.
+        <div class="misc-links">
+          <a class="mlink" href="YOUR-CERTIFICATE-URL" target="_blank">Certificate</a>
+          <a class="mlink" href="YOUR-AWARD-PAGE-URL" target="_blank">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="misc-row">
+      <span class="misc-yr">2024</span>
+      <div class="misc-txt">
+        <strong>IEEE Systems Council Engineering Undergraduate Scholarship</strong> - <em>IEEE Systems Council</em>
+        <div class="misc-links">
+          <a class="mlink" href="YOUR-CERTIFICATE-URL" target="_blank">Certificate</a>
+          <a class="mlink" href="YOUR-AWARD-PAGE-URL" target="_blank">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="misc-row">
+      <span class="misc-yr">2023</span>
+      <div class="misc-txt">
+        <strong>IEEE AP-S USRS Scholarship</strong> - <em>IEEE Antennas and Propagation Society</em>
+        <div class="misc-links">
+          <a class="mlink" href="YOUR-CERTIFICATE-URL" target="_blank">Certificate</a>
+          <a class="mlink" href="YOUR-AWARD-PAGE-URL" target="_blank">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="misc-row">
+      <span class="misc-yr">2022</span>
+      <div class="misc-txt">
+        <strong>Grace Hopper Celebration Student Scholarship</strong> - <em>AnitaB.org</em>
+        <div class="misc-links">
+          <a class="mlink" href="YOUR-CERTIFICATE-URL" target="_blank">Certificate</a>
+          <a class="mlink" href="YOUR-AWARD-PAGE-URL" target="_blank">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="misc-row">
+      <span class="misc-yr">2022</span>
+      <div class="misc-txt">
+        <strong>India National Science Academies' Summer Research Fellowship</strong> - <em>Indian Academy of Sciences</em>. Competitive national fellowship for undergraduate research.
+        <div class="misc-links">
+          <a class="mlink" href="YOUR-CERTIFICATE-URL" target="_blank">Certificate</a>
+          <a class="mlink" href="YOUR-AWARD-PAGE-URL" target="_blank">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="misc-row">
+      <span class="misc-yr">2020-2024</span>
+      <div class="misc-txt">
+        <strong>Institute Topper</strong> - <em>APJ Abdul Kalam Technological University, Kerala</em>
+        <div class="misc-links">
+          <a class="mlink" href="YOUR-CERTIFICATE-URL" target="_blank">Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="misc-row">
+      <span class="misc-yr">2018–20</span>
+      <div class="misc-txt">
+        <strong>School Topper</strong> - <em>GMMGHSS, Palakkad</em>
+        <div class="misc-links">
+          <a class="mlink" href="YOUR-CERTIFICATE-URL" target="_blank">Certificate</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <h2 class="sec-h">Positions of Responsibility</h2>
   <div class="misc-group">
-    <div class="misc-row"><span class="misc-yr">—</span><div class="misc-txt"><strong>Chair</strong> — <em>IEEE MTT-S Student Branch Chapter</em>.</div></div>
-    <div class="misc-row"><span class="misc-yr">—</span><div class="misc-txt"><strong>Member, Web Content Writer &amp; Design Volunteer</strong> — <em>IEEE Student Branch, NSSCE</em>.</div></div>
-    <div class="misc-row"><span class="misc-yr">—</span><div class="misc-txt"><strong>Treasurer, Design Volunteer &amp; Newsletter Editor</strong> — <em>Electronics and Communication Student Teachers Association (ELACSTA), NSSCE</em>.</div></div>
+    <div class="misc-row"><span class="misc-yr">-</span><div class="misc-txt"><strong>Chair</strong> - <em>IEEE MTT-S Student Branch Chapter</em>.</div></div>
+    <div class="misc-row"><span class="misc-yr">-</span><div class="misc-txt"><strong>Member, Web Content Writer &amp; Design Volunteer</strong> - <em>IEEE Student Branch, NSSCE</em>.</div></div>
+    <div class="misc-row"><span class="misc-yr">-</span><div class="misc-txt"><strong>Treasurer, Design Volunteer &amp; Newsletter Editor</strong> - <em>Electronics and Communication Student Teachers Association (ELACSTA), NSSCE</em>.</div></div>
   </div>
 
   <h2 class="sec-h">Certifications</h2>
   <div class="misc-group">
-    <div class="misc-row"><span class="misc-yr">NPTEL</span><div class="misc-txt"><strong>Deep Learning</strong> — <em>IIT Kharagpur</em>. Topper (Top 2%), Silver Badge.</div></div>
-    <div class="misc-row"><span class="misc-yr">NPTEL</span><div class="misc-txt"><strong>Analog Circuits</strong> — <em>IIT Bombay</em>. Silver Badge.</div></div>
-    <div class="misc-row"><span class="misc-yr">NPTEL</span><div class="misc-txt"><strong>Python for Data Science</strong> — <em>IIT Madras</em>. Silver Badge.</div></div>
-    <div class="misc-row"><span class="misc-yr">NPTEL</span><div class="misc-txt"><strong>Essential Mathematics for Machine Learning</strong> — <em>IIT Roorkee</em>.</div></div>
-    <div class="misc-row"><span class="misc-yr">NIELIT</span><div class="misc-txt"><strong>FPGA Architecture and Programming using Verilog HDL</strong> — <em>NIELIT Calicut</em>.</div></div>
-    <div class="misc-row"><span class="misc-yr">Coursera</span><div class="misc-txt"><strong>Programming Fundamentals (C Programming)</strong> — <em>Duke University</em>.</div></div>
+    <div class="misc-row"><span class="misc-yr">NPTEL</span><div class="misc-txt"><strong>Deep Learning</strong> - <em>IIT Kharagpur</em>. Topper (Top 2%), Silver Badge.</div></div>
+    <div class="misc-row"><span class="misc-yr">NPTEL</span><div class="misc-txt"><strong>Analog Circuits</strong> - <em>IIT Bombay</em>. Silver Badge.</div></div>
+    <div class="misc-row"><span class="misc-yr">NPTEL</span><div class="misc-txt"><strong>Python for Data Science</strong> - <em>IIT Madras</em>. Silver Badge.</div></div>
+    <div class="misc-row"><span class="misc-yr">NPTEL</span><div class="misc-txt"><strong>Essential Mathematics for Machine Learning</strong> - <em>IIT Roorkee</em>.</div></div>
+    <div class="misc-row"><span class="misc-yr">NIELIT</span><div class="misc-txt"><strong>FPGA Architecture and Programming using Verilog HDL</strong> - <em>NIELIT Calicut</em>.</div></div>
+    <div class="misc-row"><span class="misc-yr">Coursera</span><div class="misc-txt"><strong>Programming Fundamentals (C Programming)</strong> - <em>Duke University</em>.</div></div>
   </div>
 
-  <footer>© 2026 Gopika Gopikrishnan · hosted on GitHub Pages</footer>
+  <h2 class="sec-h">Hobbies &amp; Interests</h2>
+<div class="misc-group">
+  <div class="misc-row"><span class="misc-yr">Sports</span><div class="misc-txt"><strong>Swimming</strong> &amp; <strong>Badminton</strong></div></div>
+  <div class="misc-row"><span class="misc-yr">Music</span><div class="misc-txt"><strong>Kalimba</strong></div></div>
+  <div class="misc-row"><span class="misc-yr">Art</span><div class="misc-txt"><strong>Watercolor painting, Glass painting, Arts &amp; Crafts</strong></div></div>
+  <div class="misc-row"><span class="misc-yr">Design</span><div class="misc-txt"><strong>UI/UX Design</strong> in Figma</div></div>
 </div>
 
+<h2 class="sec-h">Gallery</h2>
+<div class="hobby-grid">
+
+  <!-- PAINTING / ART — replace src with your image paths -->
+  <div class="hobby-card">
+    <img src="gallery/painting1.jpg" alt="Watercolor painting">
+    <div class="hobby-card-label">Watercolor</div>
+  </div>
+  <div class="hobby-card">
+    <img src="gallery/glass-painting1.jpg" alt="Glass painting">
+    <div class="hobby-card-label">Glass Painting</div>
+  </div>
+
+  <!-- FIGMA DESIGN WORK -->
+  <div class="hobby-card">
+    <img src="gallery/figma-design1.jpg" alt="Figma UI design">
+    <div class="hobby-card-label">Figma — UI Design</div>
+  </div>
+
+  <!-- INTERNSHIP EXPERIENCES -->
+  <div class="hobby-card">
+    <img src="gallery/iisc-internship.jpg" alt="IISc internship">
+    <div class="hobby-card-label">Summer Research @ IISc</div>
+  </div>
+
+  <!-- AWARDS / TOPPER -->
+  <div class="hobby-card">
+    <img src="gallery/topper-award.jpg" alt="Institute Topper award">
+    <div class="hobby-card-label">Institute Topper Award</div>
+  </div>
+</div>
+<footer>© 2026 Gopika Gopikrishnan · hosted on GitHub Pages</footer>
+</div>
 <!-- CV -->
 <div class="page" id="page-cv">
   <div class="ph">
@@ -435,7 +550,7 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--border);f
     <div class="cv-row">
       <div class="cv-dt">Jun 2023</div>
       <div class="cv-dd">
-        <strong>Intern — Digital Image Processing</strong>
+        <strong>Intern - Digital Image Processing</strong>
         <em>Vikram Sarabhai Space Centre (VSSC), Trivandrum, Kerala (On-Site)</em>
         <span>Analysis of Speeded Up Robust Features (SURF) Algorithm for Vision-based Navigation Systems.</span>
       </div>
@@ -443,7 +558,7 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--border);f
     <div class="cv-row">
       <div class="cv-dt">May 2023</div>
       <div class="cv-dd">
-        <strong>Intern — Medical Electronics</strong>
+        <strong>Intern - Medical Electronics</strong>
         <em>BPL Medical Technologies, Palakkad, Kerala (On-Site)</em>
         <span>Calibration and testing of Patient Bedside Monitoring Systems, ECG Monitors, and Pulse Oximeters.</span>
       </div>
@@ -451,7 +566,7 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--border);f
     <div class="cv-row">
       <div class="cv-dt">Feb – May 2023</div>
       <div class="cv-dd">
-        <strong>Intern — SCADA &amp; High Voltage Traction</strong>
+        <strong>Intern - SCADA &amp; High Voltage Traction</strong>
         <em>Indian Railways, Palakkad, Kerala (On-Site)</em>
         <span>SCADA Remote Control for Railway Electrification and High Voltage Traction Systems.</span>
       </div>
@@ -459,7 +574,7 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--border);f
     <div class="cv-row">
       <div class="cv-dt">Dec 2022 – Mar 2023</div>
       <div class="cv-dd">
-        <strong>Intern — Cryptography</strong>
+        <strong>Intern - Cryptography</strong>
         <em>IIT Guwahati, Assam (Remote)</em>
         <span>Implemented an FPGA-based cryptography system using Verilog HDL in Xilinx Vivado.</span>
       </div>
@@ -467,7 +582,7 @@ footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--border);f
     <div class="cv-row">
       <div class="cv-dt">May – Jul 2022</div>
       <div class="cv-dd">
-        <strong>Summer Research Fellow — Computer Networks</strong>
+        <strong>Summer Research Fellow - Computer Networks</strong>
         <em>IISc, Bengaluru, Karnataka (On-Site)</em>
         <span>Worked on 'Time Slicing High Throughput Wi-Fi Networks using Centralized Queuing and Scheduling'.</span>
       </div>
